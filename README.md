@@ -16,7 +16,7 @@ The audio output is crunchtastic analog synth and created with this simple circu
 * and a microB usb cable
 
 Sources: 
-Dutch: https://www.kiwi-electronics.nl/ 
-American: http://www.adafruit.com
+*Dutch: https://www.kiwi-electronics.nl/ 
+*American: http://www.adafruit.com
 
 There's also a little pdf and keynote hanging out in this repo. It's the notes for the workshop. 
