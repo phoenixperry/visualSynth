@@ -1,25 +1,19 @@
-######This is an arduino / processing project for making a one button synth that is also a drawing machine. 
+#####This is an arduino / processing project for making a one button synth drawing machine. 
 
-It makes stuff that looks like this 
+It makes visual output that looks like this 
 ![output image](output.png)	
 
 The audio output is crunchtastic analog synth and created with this simple circuit
 ![circut](circuit_bb.png) 
 
-The materials you'll need are: 
-an Arduino micro
-
-a 10k 10k potentiometer
-
-a small 3" Diameter - 8 Ohm 1 Watt speaker
-
-a push button
-
-jumper wires 
-
-a breadboard 
-
-and a microB usb cable
+######The materials you'll need are: 
+* an Arduino micro
+* a 10k potentiometer
+* a small 3" Diameter - 8 Ohm 1 Watt speaker
+* a push button
+* jumper wires 
+* a breadboard 
+* and a microB usb cable
 
 Sources: 
 Dutch: https://www.kiwi-electronics.nl/ 
