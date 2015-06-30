@@ -8,11 +8,17 @@ The audio output is crunchtastic analog synth and created with this simple circu
 
 The materials you'll need are: 
 an Arduino micro
+
 a 10k 10k potentiometer
+
 a small 3" Diameter - 8 Ohm 1 Watt speaker
+
 a push button
+
 jumper wires 
+
 a breadboard 
+
 and a microB usb cable
 
 Sources: 
