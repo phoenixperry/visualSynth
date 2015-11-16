@@ -9,7 +9,10 @@ String myString = null; //all data from arduino
 void setup() {
   println(Serial.list()); //what ports are on my computer! 
   myPort = new Serial(this, "/dev/tty.usbmodem1421",57600); //pick the right port and
-  //set the speed were' going to check the port at 
+  //set the speed were' going to check the port at. If you ever see just noise in the arduino serial montior
+  // output window, check to make sure the port speed matches the arduino sketch settings too. 
+  //Other common effups are to not have the arduino serial monitor closed when trying to read it on 
+  //processing. if you do this processing can't get the data b/c the window already has locked onto the port 
   size(displayWidth, displayHeight); 
   //this sets up the window size to the size of your screen 
   background(0); 
@@ -18,9 +21,12 @@ void setup() {
 
 void draw() {
   smooth(); //sets the drawing up to be sexy 
+  
   //handle arduino data.   
   while (myPort.available() > 0) { //hey while there's data at the port 
-    myString = myPort.readStringUntil(lf); //read it until you hit the end of the line
+    myString = myPort.readStringUntil(lf); //read it until you hit the end of the line. This is an escape 
+    //character. google it if you've not hit upon it yet in your classes. you should know them. 
+    
     //and save it into the myString variable 
     if (myString != null) { //if we did that successfully 
     //print(myString);  // Prints String 
@@ -57,22 +63,22 @@ void draw() {
         float radius = widthMap/2;
         //divide the widthmap by two so it's an equal circle raduis
 
-        float angle = TWO_PI/circleResolution;
+        float angle = TWO_PI/circleResolution; // this is just normal old maths. 
         //we are going to be moving around the cicle by an angle 
         
-        noFill(); 
-        strokeWeight(1);
-        stroke(255, 25);
+        noFill(); //fills are for losers!  
+        strokeWeight(1); // 1 point stroke for hipster cool! 
+        stroke(255, 25); // minmial graphics are in yo. 
     
-        beginShape();
-        for (int i=0; i<=circleResolution; i++){
-          float x = 0 + cos(angle*i) * radius;
-          float y = 0 + sin(angle*i) * radius;
-          vertex(x, y);
+        beginShape();//this is the good stuff. make me art!  
+        for (int i=0; i<=circleResolution; i++){//here we set how detailed to make the circle 
+          float x = 0 + cos(angle*i) * radius; // move around the circle by each point in x space 
+          float y = 0 + sin(angle*i) * radius; // move around the circle by each point in y space 
+          vertex(x, y); // visualize the circle 
         }
-        endShape();
+        endShape(); //done with arting now 
         
-        popMatrix();
+        popMatrix(); //pop back to the upper left hand 0, 0 location 
       }
 }
 
