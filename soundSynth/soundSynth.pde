@@ -24,8 +24,7 @@ void draw() {
   
   //handle arduino data.   
   while (myPort.available() > 0) { //hey while there's data at the port 
-    myString = myPort.readStringUntil(lf); //read it until you hit the end of the line. This is an escape 
-    //character. google it if you've not hit upon it yet in your classes. you should know them. 
+    myString = myPort.readStringUntil(lf); //read it until you hit the end of the line. 
     
     //and save it into the myString variable 
     if (myString != null) { //if we did that successfully 
